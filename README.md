@@ -1,6 +1,6 @@
-# rgraph-mcp
+# rnaseq-plot-mcp
 
-RNAseq **下游**可视化 / 分析 MCP。把一套参数化 R 出图脚本
+RNA-seq **下游出图 / 分析** MCP（旧称 rgraph）。把一套参数化 R 出图脚本
 （ggplot2 / pheatmap / clusterProfiler / edgeR / limma / WGCNA …）
 封装为 MCP 工具，由本机 **Rscript** 渲染 **png + pdf**。
 
@@ -48,7 +48,7 @@ WGCNA → 网络：`rgraph_wgcna` 导出 `Cytoscape_edges_*.txt` 后交给 `rgra
   "mcpServers": {
     "r-analysis": {
       "command": "uv",
-      "args": ["run", "--directory", "/absolute/path/to/rgraph-mcp", "server.py"],
+      "args": ["run", "--directory", "/absolute/path/to/rnaseq-plot-mcp", "server.py"],
       "env": { "RGRAPH_RSCRIPT": "/path/to/Rscript" }
     }
   }
@@ -56,6 +56,8 @@ WGCNA → 网络：`rgraph_wgcna` 导出 `Cytoscape_edges_*.txt` 后交给 `rgra
 ```
 
 合成测试矩阵在 `tests/data/`（`g1`–`g10`，不含真实实验数据）。
+
+MCP 工具名仍是 `rgraph_*`（如 `rgraph_volcano`），与本机 Cursor 配置兼容。
 
 ## 许可
 
