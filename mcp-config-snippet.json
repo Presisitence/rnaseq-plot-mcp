@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "r-analysis": {
+      "command": "uv",
+      "args": ["run", "--directory", "/absolute/path/to/rgraph-mcp", "server.py"],
+      "env": {
+        "RGRAPH_RSCRIPT": "/path/to/Rscript"
+      }
+    }
+  }
+}
